@@ -19,12 +19,10 @@
     }
 
     .header {
-      width: 50%;
-      display: flex;
+      width: 40%;
+      display: inline-flex;
       justify-content: center;
       align-items: center;
-      top: 0;
-      left: 0;
       z-index: 9999;
     }
 
@@ -34,6 +32,7 @@
       margin-bottom: 3rem;
       color:white;
       background-color: #867070;
+      word-wrap: break-word;
     }
 
     .container {
@@ -47,12 +46,13 @@
       justify-content: center;
       align-items: center;
       gap: 2rem;
-      margin:50px;
+      margin:5%;
     }
 
     .pricing-plan{ /*correspond to each items in the container*/
       flex: 1;
-      max-width: 400px;
+      min-width: 200px;
+      max-width: 100%;
       padding: 40px;
       border-radius: 5px;
       text-align: center;
