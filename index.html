@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    h1 {
+      font-family: 'Sono', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color:white;
+      background-color: #867070;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pricing-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin:50px;
+    }
+
+    .pricing-plan{ /*correspond to each items in the container*/
+      flex: 1;
+      max-width: 400px;
+      padding: 40px;
+      border-radius: 5px;
+      text-align: center;
+      background-color: #f2f2f2;
+      justify-content: space-between;
+    }
+
+
+    .pricing-plan:hover{
+      background-color: #e6e6e6;
+    }
+
+    #premium:hover  {
+      background-color: #FFF7D4;
+    }
+
+    #premium .plan-title:after{
+      content: "recommended";
+      display: block;
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #f4791f;
+    }
+
+    .plan-title{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .plan-price{
+      font-size: 2rem;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+
+    .plan-features{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .plan-features li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .plan-button{
+      padding:5px;
+      background-color: #F79540 ;
+      color: white;
+      border-radius: 5px;
+      border:none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .plan-button:hover{
+      transform: scale(1.05);
+      background-color: #f4791f;
+    }
+
+
+    @media (max-width: 1250px) {
+      .pricing-container{
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Pricing Plan</h1>
+  </div>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <div class="plan-description">
+        <p>A great option for individuals and small businesses who need a basic set of features and storage.</p>
+      </div>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan" id="premium">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 500GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <div class="plan-description">
+        <p>Perfect for businesses and organizations that require large amounts of storage and support.</p>
+      </div>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <div class="plan-description">
+        <p>Best for small to medium-sized businesses that require more storage and support than the Basic plan.</p>
+      </div>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
